@@ -1,0 +1,183 @@
+{
+    "Violence against the person": {
+        "Homicide": {
+            "1": "Murder",
+            "4/1": "Manslaughter",
+            "4/2": "Infanticide",
+            "4/10": "Corporate manslaughter"
+        },
+        "Violence with injury": {
+            "2": "Attempted murder",
+            "4/3": "Intentional destruction of a viable unborn child",
+            "4/7": "Causing or allow death or Serious Physical Harm to child or or vulnerable person",
+            "5D": "Assault with intent to cause serious harm",
+            "5E": "Endangering Life",
+            "8N": "Assault with injury",
+            "8P": "Racially or religiously aggravated assault with injury",
+            "8S": "Assault with Injury on a Contable",
+            "11A": "Cruelty to Children/Young Persons",
+            "13": "Child abduction",
+            "14": "Procuring illegal abortion"
+        },
+        "Violence without injury": {
+            "3A": "Conspiracy to murder",
+            "3B": "Threats to kill",
+            "36": "Kidnapping",
+            "104": "Assault without injury on a constable",
+            "105A": "Assault without injury",
+            "105B": "Racially or religiously aggravated assault without injury",
+            "106": "Modern Slavery"
+        },
+        "Death or serious injury caused by unlawful driving": {
+            "4/4": "Causing death or Serious Injury by dangerous driving",
+            "4/6": "Causing death by careless driving under influence of drink or drugs",
+            "4/8": "Causing death by careless or inconsiderate driving",
+            "4/9": "Causing death or Serious Injury by driving: unlicensed drivers etc.",
+            "37/1": "Causing death by aggravated vehicle taking"
+        },
+        "Stalking and harassment": {
+            "8L": "Harassment",
+            "8M": "Racially or religiously aggravated harassment",
+            "8Q": "Stalking",
+            "8R": "Malicious Communications"
+        }
+
+    },
+    "Public Order": {
+        "9A": "Public fear, alarm or distress",
+        "9B": "Racially or religiously aggravated public fear, alarm or distress",
+        "62A": "Violent disorder",
+        "66": "Other offences against the State or public order"
+    },
+    "Possession of weapons": {
+        "10A": "Possession of firearms with intent",
+        "10B": "Possession of firearms offences",
+        "10C": "Possession of other weapons",
+        "10D": "Possession of article with blade or point",
+        "81": "Other firearms offences",
+        "90": "Other knives offences"
+    },
+    "Miscellaneous crimes against society": {
+        "15": "Concealing an infant death close to birth",
+        "24": "Exploitation of prostitution",
+        "26": "Bigamy",
+        "27": "Soliciting for the purpose of prostitution",
+        "33": "Going equipped for stealing, etc",
+        "33A": "Making, Supplying or Possessing Articles for us in Fraud",
+        "38": "Profiting from or concealing knowledge of the proceeds of crime",
+        "54": "Handling stolen goods",
+        "59": "Threat or possession with intent to commit criminal damage",
+        "60": "Forgery or use of false drug prescription",
+        "61": "Other forgery",
+        "61A": "Possession of false documents",
+        "67": "Perjury",
+        "69": "Offender Management Act",
+        "76": "Aiding suicide",
+        "79": "Perverting the course of justice",
+        "80": "Absconding from lawful custody",
+        "83": "Bail offences",
+        "86": "Obscene publications etc",
+        "95": "Disclosure, obstruction, false or misleading statements etc",
+        "96": "Wildlife Crime",
+        "99": "Other notifiable offences",
+        "802": "Dangerous driving",
+        "814": "Fraud, forgery etc associated with vehicle or driver records"
+    },
+    "Sexual offences": {
+        "Other sexual offences": {
+            "17A": "Sexual assault on a male aged 13 and over",
+            "17B": "Sexual assault on a male child under 13",
+            "20A": "Sexual assault on a female aged 13 and over",
+            "20B": "Sexual assault on a female child under 13",
+            "21": "Sexual activity involving a child under 13",
+            "22A": "Causing sexual activity without consent",
+            "22B": "Sexual activity involving child under 16",
+            "23": "Incest or familial sexual offences",
+            "70": "Sexual activity etc. with a person with a mental disorder",
+            "71": "Abuse of children through Sexual Exploitation",
+            "73": "Abuse of position of trust of a sexual nature",
+            "88A": "Sexual grooming",
+            "88C": "Other miscellaneous sexual offences",
+            "88D": "Unnatural sexual offences",
+            "88E": "Exposure and voyeurism"
+        },
+        "Rape": {
+            "19C": "Rape of a female aged 16 and over",
+            "19D": "Rape of a female child under 16",
+            "19E": "Rape of a female child under 13",
+            "19F": "Rape of a male aged 16 and over",
+            "19G": "Rape of a male child under 16",
+            "19H": "Rape of a male child under 13",
+            "19J": "Rape of a Female – Multiple Undefined Offenders",
+            "19K": "Rape of a Male - Multiple Undefined Offenders"
+        }
+    },
+    "Burglary": {
+        "Burglary Residential": {
+            "28E": "Burglary - Residential",
+            "28F": "Attempted burglary - Residential",
+            "28G": "Distraction burglary - Residentail",
+            "28H": "Attempted distraction burglary - Residential",
+            "29A": "Aggravated burglary in a dwelling"
+        },
+        "Burglary Business and Community": {
+            "30C": "Burglary - Business and Community",
+            "30D": "Attempted burglary Business and community",
+            "31A": "Aggravated burglary - Business and Community"
+        }
+    },
+    "Robbery": {
+        "34A": "Robbery of business property",
+        "34B": "Robbery of personal property"
+    },
+    "Vehicle offences": {
+        "37/2": "Aggravated vehicle taking",
+        "45": "Theft from vehicle",
+        "48": "Theft or unauthorised taking of motor vehicle",
+        "126": "Interfering with a motor vehicle"
+    },
+    "Arson and criminal damage": {
+        "Arson": {
+            "56A": "Arson endangering life",
+            "56B": "Arson not endangering life"
+        },
+        "Criminal Damage": {
+            "58A": "Criminal damage to a dwelling",
+            "58B": "Criminal damage to a building other than a dwelling",
+            "58C": "Criminal damage to a vehicle",
+            "58D": "Other criminal damage",
+            "58J": "Racially or religiously aggravated criminal damage"
+        }
+    },
+    "Theft": {
+        "Other theft": {
+            "35": "Blackmail",
+            "40": "Theft in a dwelling other than from an automatic machine or meter",
+            "41": "Theft by an employee",
+            "42": "Theft of mail",
+            "43": "Dishonest use of electricity",
+            "47": "Theft from an automatic machine or meter",
+            "49": "Other theft",
+            "49A": "Theft - Making Off Without Payment "
+        },
+        "Theft from the person": {
+            "39": "Theft from the person"
+        },
+        "Bicycle theft": {
+            "44": "Theft or unauthorised taking of a pedal cycle "
+        },
+        "Shoplifting": {
+            "46": "Shoplifting"
+        }
+    },
+    "Drug offences": {
+        "Trafficking of drugs": {
+            "92A": "Trafficking in controlled drugs"
+        },
+    "Possession of drugs": {
+        "92C": "Other drug offences",
+        "92D": "Possession of controlled drugs (excluding Cannabis)",
+        "92E": "Possession of controlled drugs (Cannabis)"
+        }
+    }
+}

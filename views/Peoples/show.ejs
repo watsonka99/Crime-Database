@@ -1,0 +1,91 @@
+<!-- Created by Daniel Sewards -->
+<%- include ("../partials/header") %>
+
+
+<h1>Suspect Reference Number: <%=people._id %></h1>
+<!-- form displaying read only information about the suspect -->
+<form>
+    <div class="row123">
+        <div class="column123">
+    <label for="firstName">First name:</label><br>
+    <input type="text" id="firstName" name="firstName" required pattern="[A-Za-z]{1,50}" title="Only letters" placeholder="<%=people.firstName%>" readonly><br>
+
+    <label for="lastname">Last name:</label><br>
+    <input type="text" id="lastName" name="lastName" required pattern="[A-Za-z]{1,50}" title="Only  letters" placeholder="<%=people.lastName%>" readonly><br>
+
+    <label for="age">Age:</label><br>
+    <input type="number" id="age" name="age" required readonly pattern="{1,200}" placeholder="<%=people.age%>"><br>
+
+    <label for="build">Build:</label><br>
+    <input type="text" id="build" name="build" required readonly placeholder="<%=people.build%>"><br>
+
+    <label for="clothes">Clothes:</label><br>
+    <input type="text" id="clothes" name="clothes" required readonly placeholder="<%=people.clothes%>"><br>
+
+    <label for="classification">Classification of Crime:</label><br>
+    <input type="text" id="classification" name="classification" required readonly placeholder="<%=people.classification%>"><br>
+</div>
+<div class="column123" >
+
+    <label for="distinguishingFeatures">Distinguishing Features:</label><br>
+    <input type="text" id="distinguishingFeatures" name="distinguishingFeatures" required readonly placeholder="<%=people.distinguishingFeatures%>"> <br>
+
+    <label for="elevation">Elevation(Height) in CMs:</label><br>
+    <input type="number" id="elevation" name="elevation" required readonly pattern="{0,300}" placeholder="<%=people.elevation%>"><br>
+
+    <label for="face">Face Description:</label><br>
+    <input type="text" id="face" name="face" required readonly placeholder="<%=people.face%>"><br>
+
+    <label for="hair">Hair:</label><br>
+    <input type="text" id="hair" name="hair" required readonly placeholder="<%=people.hair%>"><br>
+
+    <label for="gait">Gait:</label><br>
+    <input type="text" id="gait" name="gait" required readonly placeholder="<%=people.gait%>"><br>
+
+    <label for="sex">Sex:</label><br>
+    <input type="text" id="sex" name="sex" required readonly placeholder="<%=people.sex%>">
+<br><br>
+</div></div>
+</form>
+<!-- redirects user to edit page for suspect -->
+<a href="/people/<%=people._id%>/edit"><button class="btn btn-primary">Edit</button></a>
+<br>
+<!-- Displays a table with the suspect's associated crime with link -->
+<h2>Associated Crimes</h2>
+<table id="t01">
+    <tr>
+      <th>Crime ID</th>
+      
+    </tr>
+      <% crimes.forEach(function(crime){ %> 
+        <tr>
+            <td><a href="/crimes/<%=crime.id%>"><%=crime.id%></a></td>
+            
+        </tr>
+    <% }) %>         
+</table>
+<!-- adds a review option for manager users only -->
+<br>
+<% if(role == "manager") { %>
+    <h2>Review</h2>
+    <table id="t01">
+        <tr>
+          <th>Review ID</th>
+          
+        </tr>
+        <% people.reviews.forEach(function(review){ %>
+            <tr>
+                <td><a href="/people/<%=people._id%>/review/<%=review._id%>"><p><%=review._id %></p></a></td>
+                
+            </tr>
+        <% }) %>
+    </table>
+    
+    <br><br>
+    <a href="/people/<%=people._id%>/review/new"><button class="btn btn-secondary">Review</button></a><br><br>
+    
+    <form id="delete" class="delete" action="/people/<%=people._id%>?_method=DELETE" method="POST">
+        <button class="btn btn-primary">Delete</button>
+    </form>
+<% } %>
+<%- include ("../partials/footer") %>

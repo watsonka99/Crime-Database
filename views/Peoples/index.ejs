@@ -1,0 +1,102 @@
+<!-- Created by Daniel Sewards -->
+<%- include ("../partials/header") %>
+
+<br>
+<h1>
+    Suspects
+</h1>
+<br>
+
+<body>
+<!-- Search bar created by Rikardas -->
+    <form action="/people" method="POST">
+      <div class="row123">
+        <div class="column123">
+          <label for="name">First Name:</label>
+          <input
+            type="name"
+            id="name"
+            name="name"
+            
+            placeholder="Enter First Name"
+            value="<%= typeof name != 'undefined' ? name : '' %>"
+          /><br>
+        </div>
+        <div class="column123">
+          <label for="name2">Last Name:</label>
+          <input
+            type="name"
+            id="name2"
+            name="name2"
+            
+            placeholder="Enter Last Name"
+            value="<%= typeof email != 'undefined' ? email : '' %>"
+          />
+          </div>
+          
+          <button type="submit" class="btn btn-primary centre">
+            Search
+          </button>
+          </div>
+        
+        
+        
+        
+        
+      </form>
+      <!-- Table that displays result of search -->
+      <br><br>
+      <% if(typeof searchResult != 'undefined' && searchResult != '') { %>
+        <br>
+        <h4 style="text-align: center;">Search Results</h4>
+        <table id="t01">
+            <tr>
+              <th>Suspect ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Classification of Crime</th>
+              <!-- <th>Associated Crime</th> -->
+            </tr>
+            <% searchResult.forEach(function(peoples){ %>
+                <tr>
+                    <td><a href="/people/<%=peoples._id%>"><%=peoples._id %></a></td>
+                    <td><%=peoples.firstName %></td>
+                    <td><%=peoples.lastName %></td>
+                    <td><%=peoples.classification %></td>
+                    
+                </tr>
+                <% }) %>
+        </table>
+            <% } else if(typeof searchResult != 'undefined') { %>
+                <h4 style="text-align: center;">No matching results</h4>
+        <% } %>
+
+    <br>
+    <h4 style="text-align: center;">All Suspects</h4>   
+            <!-- all suspects are displayed  -->
+    <table id="t01">
+        <tr>
+          <th>Suspect ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Classification of Crime</th>
+          <!-- <th>Associated Crime</th> -->
+        </tr>
+        <% people.forEach(function(peoples){ %>
+            <tr>
+              <!-- This link redirects user to the suspects' individual page -->
+                <td><a href="/people/<%=peoples._id%>"><%=peoples._id %></a></td>
+                <td><%=peoples.firstName %></td>
+                <td><%=peoples.lastName %></td>
+                <td><%=peoples.classification %></td>
+                
+            </tr>
+        <% }) %>
+    </table>
+
+
+    <br>
+
+</body>
+
+<%- include ("../partials/footer") %>

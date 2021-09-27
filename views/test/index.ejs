@@ -1,0 +1,9 @@
+<h1>
+    Index
+</h1>
+
+<body>
+    <% crimes.forEach(function(crime){ %>
+        <a href="/crimes/<%=crime._id%>"><%=crime.firstName %></a>
+    <% }) %>
+</body>

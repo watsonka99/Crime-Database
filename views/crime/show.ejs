@@ -1,0 +1,60 @@
+<!-- A web page displaying information about a crime - Ryan Donnelly -->
+
+<%- include ("../partials/header") %>
+
+<h1>Crime Reference Number: <%=crime._id%></h1>
+edited: <%- crime.edited%>
+<p>-----------------------------------------------------</p>
+<form>
+    <div class="row123">
+        <div class="column123">
+    <label for="firstName">Reportee First name:</label><br>
+    <input type="text" id="firstName" name="firstName"  pattern="[A-Za-z]{1,50}" title="Only letters" placeholder="<%=crime.firstName%>" readonly><br>
+
+    <label for="lastname">Reportee Last name:</label><br>
+    <input type="text" id="lastName" name="lastName"  pattern="[A-Za-z]{1,50}" title="Only  letters" placeholder="<%=crime.lastName%>" readonly><br>
+
+    <label for="date">Date:</label><br>
+    <input type="text" id="date" name="date"  readonly pattern="{1,200}" placeholder="<%=crime.date%>"><br>
+
+</div>
+<div class="column123" >
+    <label for="time">Time:</label><br>
+    <input type="text" id="time" name="time"  readonly placeholder="<%=crime.time%>"><br>
+
+    <label for="postcode">Postcode:</label><br>
+    <input type="text" id="postcode" name="postcode"  readonly placeholder="<%=crime.postcode%>"><br>
+
+    <label for="classification">Classification of Crime:</label><br>
+    <input type="text" id="classification" name="classification"  readonly placeholder="<%=crime.classification%>"><br>
+<br><br>
+</div></div>
+</form>
+<a href="/crimes/<%=crime._id%>/edit" id= edit class="btn btn-primary">Edit Crime</a>
+<br>
+<h2>Suspects</h2>
+<table id="t01">
+    <tr>
+        <th>Suspect ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+    <% suspects.forEach(function(suspect){ %>
+        <tr>
+            <td><a href="/people/<%=suspect.id%>"><%=suspect.id%></a></td>
+            <td><%=suspect.firstName%></td>
+            <td><%=suspect.lastName%></td>
+        </tr>
+    <% }) %>
+</table>
+<br>
+<a href="/crimes/<%=crime._id%>/people/new"><button class="btn btn-primary">New Suspect</button></a>
+<br><br>
+
+<% if(role == "manager") { %>
+    <form id="delete" class="delete" action="/crimes/<%=crime._id%>?_method=DELETE" method="POST">
+        <button class="btn btn-primary">Delete Crime</button>
+    </form>
+<%}%> 
+
+<%- include ("../partials/footer") %>

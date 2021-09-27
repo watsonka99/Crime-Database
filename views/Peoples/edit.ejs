@@ -1,0 +1,99 @@
+<!-- Created by Daniel Sewards -->
+
+<!-- Calls the header file which contains the nav bar and stylesheet -->
+<%- include ("../partials/header") %>
+
+    <br>
+    <!-- Form with suspects information stored that allows editing -->
+<form action="/people/<%=people._id%>?_method=PUT" method="POST">
+    <div class="row123">
+    <div class="column123">
+    <label for="firstName">First name:</label><br>
+    <input type="text" id="firstName" name="firstName" required pattern="[A-Za-z]{1,50}" title="Only letters" value="<%=people.firstName%>" ><br>
+
+    <label for="lastname">Last name:</label><br>
+    <input type="text" id="lastName" name="lastName" required pattern="[A-Za-z]{1,50}" title="Only  letters" value="<%=people.lastName%>" ><br>
+
+    <label for="age">Age:</label><br>
+    <input type="number" id="age" name="age" required  pattern="{1,200}" value="<%=people.age%>"><br>
+
+    <label for="elevation">Elevation(Height) in CMs:</label><br>
+    <input type="number" id="elevation" name="elevation" required  pattern="{0,300}" value="<%=people.elevation%>"><br>
+
+    <label for="build">Build:</label><br>
+    <input type="text" id="build" name="build" required  value="<%=people.build%>"><br>
+
+    <label for="clothes">Clothes:</label><br>
+    <input type="text" id="clothes" name="clothes" required  value="<%=people.clothes%>"><br>
+        <!-- dropdown menu with JavaScript determining which value to set as selected -->
+    <label for="classification">Classification of Crime:</label><br>
+    <select id="classification" name="classification" required>
+        <% if(people.classification === "Group1"){ %>
+            <option selected value="Group 1">Group 1</option>
+            <option value="Group 2">Group 2</option>
+            <option value="Group 3">Group 3</option>
+
+        <% } else if(people.classification === "Group 2"){ %>
+            <option value="Group 1">Group 1</option>
+            <option selected value="Group 2">Group 2</option>
+            <option value="Group 3">Group 3</option>
+        
+        <%} else if(people.classification === "Group 3"){ %>
+            <option value="Group 1">Group 1</option>
+            <option value="Group 2">Group 2</option>
+            <option selected value="Group 3">Group 3</option>
+
+        <%} else { %>
+            <option value="Group 1">Group 1</option>
+            <option value="Group 2">Group 2</option>
+            <option value="Group 3">Group 3</option>
+            <% } %>
+    
+    </select>
+    
+</div>
+<div class="column123" >
+    
+    <label for="distinguishingFeatures">Distinguishing Features:</label><br>
+    <textarea id="distinguishingFeatures" name="distinguishingFeatures" required ><%=people.distinguishingFeatures%></textarea> <br>
+    
+    <label for="face">Face Description:</label><br>
+    <textarea id="face" name="face" required ><%=people.face%></textarea><br>
+
+    <label for="hair">Hair:</label><br>
+    <input type="text" id="hair" name="hair" required  value="<%=people.hair%>"><br>
+
+    <label for="gait">Gait:</label><br>
+    <input type="text" id="gait" name="gait" required  value="<%=people.gait%>"><br>
+
+    <label for="sex">Sex:</label><br>
+    <select id="sex" name="sex" required>
+    <% if(people.sex === "Male"){ %>
+        <option selected value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+
+    <% } else if(people.sex === "Female"){ %>
+        <option value="Male">Male</option>
+        <option selected value="Female">Female</option>
+        <option value="Other">Other</option>
+    
+    <%} else if(people.sex === "Other"){ %>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option selected value="Other">Other</option>
+
+        <%} else { %>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        <% } %>
+    </select>
+    </div>
+</div>
+<br>
+    <button class="btn btn-primary" style="display: block; margin: 0 auto;">Submit</button>
+   
+</form>
+
+<%- include ("../partials/footer") %>

@@ -1,0 +1,44 @@
+  table {
+    width:100%;
+  }
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 15px;
+    text-align: left;
+  }
+  #t01 tr:nth-child(even) {
+    background-color: #deedff;
+  }
+  #t01 tr:nth-child(odd) {
+   background-color: #fff;
+  }
+  #t01 th {
+    background-color: #004eab;
+    color: white;
+  }
+  .navbar-center
+  {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 0;
+      text-align: center;
+      height:0;
+      overflow: visible;
+  }
+  .centre {
+      text-align: center;
+    }
+.row123 {
+    display: flex;
+   
+  }
+      
+.column123 {
+        flex: 50%;
+      text-align: center;
+}
+

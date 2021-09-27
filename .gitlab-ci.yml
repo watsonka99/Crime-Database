@@ -1,0 +1,12 @@
+image: node:latest
+
+  
+ 
+before_script:
+  - npm install
+  - npm update
+
+
+build:
+  script:
+        - npm run test

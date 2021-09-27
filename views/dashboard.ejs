@@ -1,0 +1,10 @@
+<!-- Created by Rikardas Bleda -->
+<%- include ("./partials/header") %>
+<h1 class="mt-4">Dashboard</h1>
+<p class="lead mb-3">Welcome <%= name %></p>
+<a href="/account" class="btn btn-primary">Account Details</a>
+<% if(role == "admin") { %>
+    <a href="/admin" class="btn btn-primary">Admin Tools</a>
+<% } %>
+<a href="/users/logout" class="btn btn-secondary">Logout</a>
+<%- include ("./partials/footer") %>

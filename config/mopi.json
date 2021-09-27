@@ -1,0 +1,17 @@
+{
+    "Group1": {
+        "Review": "10",
+        "Delete": "100",
+        "Auto": false
+    },
+    "Group2": {
+        "Review": "6",
+        "Delete": "100",
+        "Auto": false
+    },
+    "Group3": {
+        "Review": "6",
+        "Delete": "20",
+        "Auto": true
+    }
+}

@@ -1,0 +1,38 @@
+<!-- Web page allowing a user to create a new crime object - Ryan Donnelly -->
+
+<%- include ("../partials/header") %>
+<form action = "/crimes" method = "POST">
+    <div class="row123">
+        <div class="column123">
+    <label for="firstName">Reportee First Name:</label><br>
+    <input type="text" id="firstName" name="firstName" required pattern="[A-Za-z]{1,50}" title="Only chararcter A-Z and a-z are permitted"><br>
+
+    <label for="lastName">Reportee Last Name:</label><br>
+    <input type="text" id="lastName" name="lastName" required pattern="[A-Za-z]{1,50}" title="Only chararcter A-Z and a-z are permitted" ><br>
+
+    <label for="date">Date of Crime:</label><br>
+    <input type="date" id="date" name="date" required><br>
+</div>
+<div class="column123" >
+
+    <label for="time">Time of Crime:</label><br>
+    <input type="time" id="time" name="time" required><br>
+
+    <label for="postcode">Postcode:</label><br>
+    <input type="text" id="postcode" name="postcode" pattern="^([A-PR-UWYZ0-9][A-HK-Y0-9][AEHMNPRTVXY0-9]?[ABEHMNPRVWXY0-9]? {1,2}[0-9][ABD-HJLN-UW-Z]{2}|GIR 0AA)$" title="Must be a valid UK postcode" required><br>
+
+    <label for="classification">Classification of Crime:</label><br>
+    <select id="classification" name="classification" required>
+        <option value="" disabled selected>Select group:</option>
+        <option value="Group 1">Group 1</option>
+        <option value="Group 2">Group 2</option>
+        <option value="Group 3">Group 3</option>
+    </select>
+</div>
+</div>
+<br><br>
+    <button class="btn btn-primary">Submit</button>
+
+</form>
+<%- include ("../partials/footer") %>
+

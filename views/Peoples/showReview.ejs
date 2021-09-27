@@ -1,0 +1,33 @@
+<%- include ("../partials/header") %>
+<!-- displays the result of the review -->
+<form action="/people/<%=personID%>/review" method="POST">
+    <label>Is there evidence of a capacity to inflict serious harm?</label>
+    <input type="checkbox" id="" name="harm" <% if (review.harm === "true"){%> checked<%}%>><br>
+    <label>Are there any concerns in relation to children or vulnerable adults?</label>
+    <input type="checkbox" id="" name="children" <% if (review.children === "true"){%> checked<%}%>><br>
+    <label>Did the behaviour involve a breach of trust?</label>
+    <input type="checkbox" id="" name="trust" <% if (review.trust === "true"){%> checked<%}%>><br>
+    <label>Is there evidence of established links or associations which might increase the risk of harm?</label>
+    <input type="checkbox" id="" name="associations" <% if (review.associations === "true"){%> checked<%}%>><br>
+    <label>Are there concerns in relation to substance misuse?</label>
+    <input type="checkbox" id="" name="substance" <% if (review.substance === "true"){%> checked<%}%>><br>
+    <label>Are there concerns that an individual’s mental state might exacerbate risk?</label>
+    <input type="checkbox" id="" name="mentalState" <% if (review.mentalState === "true"){%> checked<%}%>><br>
+    <label>Are there any other issues that impact on the level of risk the individual presents?</label>
+    <input type="checkbox" id="" name="impact" <% if (review.impact === "true"){%> checked<%}%>><br>
+    <label>Could this individual be of interest to ongoing public inquires?</label>
+    <input type="checkbox" id="" name="interest" <% if (review.interest === "true"){%> checked<%}%>><br>
+</form>
+
+<%- include ("../partials/footer") %>
+
+
+
+
+
+
+
+
+
+
+

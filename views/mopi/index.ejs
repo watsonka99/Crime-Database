@@ -1,0 +1,24 @@
+<%- include ("../partials/header") %>
+<h1>
+    Review Due
+</h1>
+
+<body>
+    <table id="t01">
+        <tr>
+          <th>Suspect ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Classification of Crime</th>
+        </tr>
+        <% people.forEach(function(peoples){ %>
+            <tr>
+                <td><a href="/people/<%=peoples._id%>"><%=peoples._id %></a></td>
+                <td><%=peoples.firstName %></td>
+                <td><%=peoples.lastName %></td>
+                <td><%=peoples.classification %></td>
+                
+            </tr>
+        <% }) %>
+    </table>
+</body>

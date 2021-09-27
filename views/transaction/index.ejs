@@ -1,0 +1,26 @@
+<%- include ("../partials/header") %>
+<h1>Transactions</h1>
+
+
+<body>
+
+<table id="t01">
+    <tr>
+      <th>Transaction ID</th>
+      <th>Action</th>
+      <th>Database</th> 
+      <th>Reference</th>
+      <th>Date</th>
+    </tr>
+    <% transactions.forEach(function(transaction){ %>
+        <tr>
+            <td><%=transaction._id %></td>
+            <td><%=transaction.action %></td>
+            <td><%=transaction.database %></td>
+            <td><%=transaction.reference %></td>
+            <td><%=transaction.date %></td>
+        </tr>
+    <% }) %>
+</table>
+
+<%- include ("../partials/footer") %>

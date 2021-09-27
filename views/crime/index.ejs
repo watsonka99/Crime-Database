@@ -1,0 +1,37 @@
+<!-- Index page for the crimes, will display all crimes to the user - Ryan Donnelly -->
+
+<%- include ("../partials/header") %>
+<h1>
+    Crimes Home Page
+</h1>
+<br>
+<body>
+    <h6><a class="btn btn-primary" href="/crimes/new">Add new crime</a></h6>
+    
+</body>
+
+<body>
+
+<table id="t01">
+    <tr>
+      <th>Crime ID</th>
+      <th>Classification</th>
+      <th>Date</th> 
+      <th>Time</th>
+    </tr>
+    <% crimes.forEach(function(crime){ %>
+        <%var dateFormatted = crime.date.split("-"); %>
+        <%var dateFormatted2 = dateFormatted[2]+"-"+dateFormatted[1]+"-"+dateFormatted[0];%>
+        <tr>
+            <td><a href="/crimes/<%=crime._id%>"><%=crime._id %></a></td>
+            <td><%=crime.classification %></td>
+            <td><%=dateFormatted2 %></td>
+            <td><%=crime.time %></td>
+        </tr>
+    <% }) %>
+</table>
+<br><br>
+
+</body>
+<%- include ("../partials/footer") %>
+

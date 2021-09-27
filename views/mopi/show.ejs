@@ -1,0 +1,35 @@
+<%- include ("../partials/header") %>
+<h1>Mopi Config</h1>
+<form>
+    <div class="row123">
+        <div class="column123">
+    <h3>Group 1:</h3><br>
+    <label>Review</label>
+    <input type="number" name="Group1Review" value="<%=mopi.Group1.Review%>" readonly><p>years</p>
+    <label>Delete</label>
+    <input type="number" name="Group1Delete" value="<%=mopi.Group1.Delete%>" readonly><p>years</p>
+    <label>Automatic Deletion</label>
+    <input type="checkbox" name="Group1Auto" value="1" <% if (mopi.Group1.Auto) { %>checked<%}%> readonly>
+        </div>
+    <div class="column123"><br>
+    <h3>Group 2:</h3>
+    <label>Review</label>
+    <input type="number" name="Group2Review" value="<%=mopi.Group2.Review%>" readonly><p>years</p>
+    <label>Delete</label>
+    <input type="number" name="Group2Delete" value="<%=mopi.Group2.Delete%>" readonly><p>years</p>
+    <label>Automatic Deletion</label>
+    <input type="checkbox" name="Group2Auto" value="1" <% if (mopi.Group2.Auto) { %>checked<%}%> readonly>
+    </div>
+
+    <div class="column123">
+    <h3>Group 3:</h3><br>
+    <label>Review</label>
+    <input type="number" name="Group3Review" value="<%=mopi.Group3.Review%>" readonly><p>years</p>
+    <label>Delete</label>
+    <input type="number" name="Group3Delete" value="<%=mopi.Group3.Delete%>" readonly><p>years</p>
+    <label>Automatic Deletion</label>
+    <input type="checkbox" name="Group3Auto" value="1" <% if (mopi.Group3.Auto) { %>checked<%}%> readonly>
+    </div>
+    </div>
+</form>
+<a href="/mopi/edit"><button class="btn btn-primary">Edit me</button></a>

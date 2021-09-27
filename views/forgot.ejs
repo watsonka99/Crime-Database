@@ -1,0 +1,29 @@
+<!-- Created by Rikardas Bleda -->
+<%- include ("./partials/header") %>
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body">
+        <h5 class="mb-3">
+          <i class="fas fa-user-plus"></i> 
+          Enter your email address to receive a recovery link to change your password.
+        </h5>     
+        <%- include('partials/messages'); %>
+        <form action="/users/forgot" method="POST">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="Enter Email"
+            />
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">
+            Send recovery email
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>

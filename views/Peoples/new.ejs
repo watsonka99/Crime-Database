@@ -1,0 +1,62 @@
+<!-- Created by Daniel Sewards -->
+<%- include ("../partials/header") %>
+
+<h1 style="text-align: center;">Add new comment for <%=crimeID%></h1>
+<!-- this form allows user to enter details for a new suspect -->
+<form action="/crimes/<%=crimeID%>/people" method="POST">
+    <div class="row123">
+        <div class="column123">
+    <label for="firstName">First name:</label><br>
+    <input type="text" name="firstName"  pattern="[A-Za-z]{1,50}" title="Only letters" required><br>
+
+    <label for="lastname">Last name:</label><br>
+    <input type="text" id="lastName" name="lastName"  pattern="[A-Za-z]{1,50}" title="Only  letters" required><br>
+
+    <label for="age">Age:</label><br>
+    <input type="number" id="age" name="age"  pattern="{1,200}" required><br>
+
+    <label for="build">Build:</label><br>
+    <input type="text" id="build" name="build" required><br>
+
+    <label for="clothes">Clothes:</label><br>
+    <input type="text" id="clothes" name="clothes" required><br>
+
+    <label for="classification">Classification of Crime:</label><br>
+    <select id="classification" name="classification" required>
+        <option value="" disabled selected>Select group:</option>
+        <option value="Group 1">Group 1</option>
+        <option value="Group 2">Group 2</option>
+        <option value="Group 3">Group 3</option>
+    </select>
+</div>
+<div class="column123" >    
+
+    <label for="distinguishingFeatures">Distinguishing Features:</label><br>
+    <textarea id="distinguishingFeatures" name="distinguishingFeatures" required></textarea> <br>
+
+    <label for="elevation">Elevation(Height) in CMs:</label><br>
+    <input type="number" id="elevation" name="elevation"  pattern="{0,300}" required><br>
+
+    <label for="face">Face Description:</label><br>
+    <textarea id="face" name="face" required></textarea><br>
+
+    <label for="hair">Hair:</label><br>
+    <input type="text" id="hair" name="hair" ><br>
+
+    <label for="gait">Gait:</label><br>
+    <input type="text" id="gait" name="gait" ><br>
+
+    <label for="sex">Sex:</label><br>
+    <select id="sex" name="sex" required>
+        <option value="" disabled selected>Select group:</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+    </select>
+</div>
+</div>
+<br>
+    <button class="btn btn-primary">Submit</button>
+</form>
+
+<%- include ("../partials/footer") %>

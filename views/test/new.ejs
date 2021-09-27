@@ -1,0 +1,31 @@
+
+<form action = "/crimes" method = "POST">
+
+    <label for="firstName">First Name:</label><br>
+    <input type="text" id="firstName" name="firstName" required pattern="[A-Za-z]{1,50}" title="Only chararcter A-Z and a-z are permitted"><br>
+
+    <label for="lastName">Last Name:</label><br>
+    <input type="text" id="lastName" name="lastName" required pattern="[A-Za-z]{1,50}" title="Only chararcter A-Z and a-z are permitted" ><br>
+
+    <label for="date">Date of Crime:</label><br>
+    <input type="date" id="date" name="date" required><br>
+
+    <label for="time">Time of Crime:</label><br>
+    <input type="time" id="time" name="time" required><br>
+
+    <label for="postcode">Postcode:</label><br>
+    <input type="text" id="postcode" name="postcode" pattern="^(([A-Z]{1,2}\d[A-Z\d]?|ASCN|STHL|TDCU|BBND|[BFS]IQQ|PCRN|TKCA) ?\d[A-Z]{2}|BFPO ?\d{1,4}|(KY\d|MSR|VG|AI)[ -]?\d{4}|[A-Z]{2} ?\d{2}|GE ?CX|GIR ?0A{2}|SAN ?TA1)$" title="Must be a valid UK postcode written in all caps" required><br>
+
+    <label for="classification">Classification of Crime:</label><br>
+    <input type="text" id="classification" name="classification" required pattern="[A-Za-z]{1,50}" title="Only chararcter A-Z and a-z are permitted"> <br>
+
+
+    <label for="editied">Classification of Crime:</label><br>
+    <input type="text" id="classification" name="editedYear" required> <br>
+    <input type="text" id="classification" name="editedMonth" required > <br>
+
+    <button>Submit</button>
+
+</form>
+
+

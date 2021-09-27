@@ -1,0 +1,58 @@
+<!-- Web page allowing a user to edit a crime - Ryan Donnelly -->
+
+<%- include ("../partials/header") %>
+<script src="../../validation/validate.test.js"></script>
+
+<!-- A form allowing a user to enter new information, with front end regex to ensure correct data types -->
+<form action="/crimes/<%=crime._id%>?_method=PUT" method="POST">
+    <div class="row123">
+        <div class="column123">
+    <label for="firstName">Reportee First Name:</label><br>
+    <input type="text" id="firstName" name="firstName" required pattern="[A-Za-z]{1,50}" title="Only chararcter A-Z and a-z are permitted" value="<%=crime.firstName%>"><br>
+
+    <label for="lastName">Reportee Last Name:</label><br>
+    <input type="text" id="lastName" name="lastName" required pattern="[A-Za-z]{1,50}" title="Only chararcter A-Z and a-z are permitted" value="<%=crime.lastName%>" ><br>
+
+    <label for="date">Date of Crime:</label><br>
+    <input type="date" id="date" name="date" required value="<%=crime.date%>"><br>
+</div>
+<div class="column123" >
+
+    <label for="time">Time of Crime:</label><br>
+    <input type="time" id="time" name="time" required value="<%=crime.time%>"><br>
+
+    <label for="postcode">Postcode:</label><br>
+    <input type="text" id="postcode" name="postcode" value="<%=crime.postcode%>" pattern="^([A-PR-UWYZ0-9][A-HK-Y0-9][AEHMNPRTVXY0-9]?[ABEHMNPRVWXY0-9]? {1,2}[0-9][ABD-HJLN-UW-Z]{2}|GIR 0AA)$" title="Must be a valid UK postcode" required><br>
+
+    <label for="classification">Classification of Crime:</label><br>
+    <select id="classification" name="classification" required>
+        <% if(crime.classification === "Group1"){ %>
+            <option selected value="Group 1">Group 1</option>
+            <option value="Group 2">Group 2</option>
+            <option value="Group 3">Group 3</option>
+
+        <% } else if(crime.classification === "Group 2"){ %>
+            <option value="Group 1">Group 1</option>
+            <option selected value="Group 2">Group 2</option>
+            <option value="Group 3">Group 3</option>
+        
+        <%} else if(crime.classification === "Group 3"){ %>
+            <option value="Group 1">Group 1</option>
+            <option value="Group 2">Group 2</option>
+            <option selected value="Group 3">Group 3</option>
+
+        <%} else { %>
+            <option value="Group 1">Group 1</option>
+            <option value="Group 2">Group 2</option>
+            <option value="Group 3">Group 3</option>
+            <% } %>
+    
+    </select>
+</div>
+</div>
+<br><br>
+
+    <button class="btn btn-primary">Submit</button>
+
+</form>
+<%- include ("../partials/footer") %>
