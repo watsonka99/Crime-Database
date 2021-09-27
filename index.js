@@ -27,16 +27,8 @@ const indexRoutes = require("./routes/index"),
 // MongoDB Configuration
 const db = require('./config/keys').MongoURI;
 
-// MongoDB Connection
-mongoose.connect(db, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false
-})
-.then(console.log('Connected to MongoDB...'))
-.catch(err => console.log(err));
 
-/**
+
 // Local MongoDB
 mongoose.connect("mongodb://localhost:27017/auth", {
      useNewUrlParser: true,
@@ -45,7 +37,7 @@ mongoose.connect("mongodb://localhost:27017/auth", {
  })
  .then(() => console.log('Connected to DB!'))
  .catch(error => console.log(error.message));      
- */  
+
  
 // Node server 
 const app = express();
