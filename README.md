@@ -4,9 +4,6 @@ This application is used to store and manage policing data in line with a compan
 
 There are 3 user roles: admin, Information manager and User. admin is incharge of the adminstration of the system, the IM is inchrage of data mangament and user can add and edit data. With the admin role users and IM can be created.
 
-Guest admin login:
-yexoxap443@laklica.com
-Password123!
 
 ## Installation
 
